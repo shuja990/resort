@@ -4,6 +4,8 @@ import Banner from '../components/banner'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../context'
 import StyledHero from '../components/StyledHero'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 class SingleRoom extends React.Component {
     constructor(props){
         super(props)
@@ -36,13 +38,13 @@ class SingleRoom extends React.Component {
                     </Banner>
                 </StyledHero>
                 <section className="single-room">
-                    <div className="single-room-images">
+                    <Carousel className="single-room-images">
                         {
                             images.map((item,id)=>(
                                 <img src={item} alt={name}/>
                             ))
                         }
-                    </div>
+                    </Carousel>
                     <div className="single-room-info">
                         <article className="desc">
                             <h3>Details</h3>
