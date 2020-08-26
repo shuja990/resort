@@ -29,7 +29,7 @@ class RoomProvider extends React.Component {
             let maxPrice = Math.max(...rooms.map(item=>item.price));
             let maxSize = Math.max(...rooms.map(item=>item.size));
             this.setState({
-                rooms,
+                rooms, 
                 featuredRooms,
                 sortedRooms:rooms,
                 loading:false,
